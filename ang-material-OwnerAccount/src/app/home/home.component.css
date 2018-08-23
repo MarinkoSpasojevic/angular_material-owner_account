@@ -1,0 +1,11 @@
+section div p:nth-child(1){
+    color: #1466d0;
+    font-size: 30px;
+    text-shadow: 1px 1px 3px grey;
+}
+
+section div p:nth-child(2){
+    color: #1466d0;
+    font-weight: bold;
+    font-size: 20px;
+}
