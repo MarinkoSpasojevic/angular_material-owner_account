@@ -7,18 +7,22 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
+import { RoutingModule } from './routing/routing.module';
+import { HeaderComponent } from './navigation/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
