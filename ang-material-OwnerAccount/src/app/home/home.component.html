@@ -1,10 +1,11 @@
 <section fxLayout="column wrap">
   <div fxFlexAlign="center">
     <p>Welcome to the Material Angular OwnerAccount Application</p>
-    <p>In this applicatoin we are going to work with:</p>
-  </div><br><br>
+  </div>
 
-  <mat-tab-group>
+  <p>In this application we are going to work with:</p>
+
+  <mat-tab-group (selectedTabChange)="executeSelectedChange($event)">
     <mat-tab label="Material Components"> 
       <p>We are going to use different material components to create nice looking angular app.</p> 
     </mat-tab>
