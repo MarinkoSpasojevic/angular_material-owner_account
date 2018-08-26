@@ -10,7 +10,7 @@ import { Owner } from '../../_interface/owner.model';
 })
 export class OwnerListComponent implements OnInit {
 
-  public displayedColumns = ['name', 'date', 'address'];
+  public displayedColumns = ['name', 'date', 'address', 'details', 'update', 'delete'];
   public dataSource = new MatTableDataSource<Owner>();
 
   constructor(private repoService: RepositoryService) { }
@@ -24,5 +24,17 @@ export class OwnerListComponent implements OnInit {
     .subscribe(res => {
       this.dataSource.data = res as Owner[];
     })
+  }
+
+  public redirectToDetails = (id: string) => {
+    
+  }
+
+  public redirectToUpdate = (id: string) => {
+    
+  }
+
+  public redirectToDelete = (id: string) => {
+    
   }
 }
