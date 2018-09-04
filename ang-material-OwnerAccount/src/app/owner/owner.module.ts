@@ -7,14 +7,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { OwnerDetailsComponent } from './owner-details/owner-details.component';
 import { OwnerDataComponent } from './owner-details/owner-data/owner-data.component';
 import { AccountDataComponent } from './owner-details/account-data/account-data.component';
+import { OwnerCreateComponent } from './owner-create/owner-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     OwnerRoutingModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
-  declarations: [OwnerListComponent, OwnerDetailsComponent, OwnerDataComponent, AccountDataComponent]
+  declarations: [OwnerListComponent, OwnerDetailsComponent, OwnerDataComponent, AccountDataComponent, OwnerCreateComponent]
 })
 export class OwnerModule { }
