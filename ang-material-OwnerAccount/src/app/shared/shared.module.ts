@@ -20,6 +20,10 @@ import { ErrorDialogComponent } from './dialogs/error-dialog/error-dialog.compon
   declarations: [
     SuccessDialogComponent, 
     ErrorDialogComponent
+  ],
+  entryComponents: [
+    SuccessDialogComponent,
+    ErrorDialogComponent
   ]
 })
 export class SharedModule { }
