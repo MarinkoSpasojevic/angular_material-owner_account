@@ -54,6 +54,7 @@ export class OwnerListComponent implements OnInit, AfterViewInit {
   }
 
   public redirectToDelete = (id: string) => {
-    
+    let url: string = `/owner/delete/${id}`;
+    this.router.navigate([url]);
   }
 }
