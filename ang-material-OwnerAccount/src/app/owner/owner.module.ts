@@ -8,6 +8,7 @@ import { AccountDataComponent } from './owner-details/account-data/account-data.
 import { OwnerCreateComponent } from './owner-create/owner-create.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { OwnerUpdateComponent } from './owner-update/owner-update.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     SharedModule
   ],
-  declarations: [OwnerListComponent, OwnerDetailsComponent, OwnerDataComponent, AccountDataComponent, OwnerCreateComponent]
+  declarations: [OwnerListComponent, OwnerDetailsComponent, OwnerDataComponent, AccountDataComponent, OwnerCreateComponent, OwnerUpdateComponent]
 })
 export class OwnerModule { }
