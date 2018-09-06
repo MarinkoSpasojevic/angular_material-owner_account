@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { OwnerForCreation } from '../../_interface/ownerForCreation.model';
 import { MatDialog } from '@angular/material';
 import { SuccessDialogComponent } from '../../shared/dialogs/success-dialog/success-dialog.component';
+import { ErrorHandlerService } from '../../shared/error-handler.service';
 
 @Component({
   selector: 'app-owner-create',
@@ -15,7 +16,7 @@ export class OwnerCreateComponent implements OnInit {
   public ownerForm: FormGroup;
   private dialogConfig;
 
-  constructor(private location: Location, private repository: RepositoryService, private dialog: MatDialog) { }
+  constructor(private location: Location, private repository: RepositoryService, private dialog: MatDialog, private errorService: ErrorHandlerService) { }
 
   ngOnInit() {
     this.ownerForm = new FormGroup({
@@ -65,8 +66,8 @@ export class OwnerCreateComponent implements OnInit {
           });
       },
         (error => {
-          //temporary as well
-          this.location.back();
+          this.errorService.dialogConfig = { ...this.dialogConfig };
+          this.errorService.handleError(error);
         })
       )
   }
